@@ -16,9 +16,8 @@ public class Client
     {
         try
         {
-           //Change in client
-        	String host = "localhost";
-            int port = 25000;
+            String host = "localhost";
+            int port = 40000;
             InetAddress address = InetAddress.getByName(host);
             socket = new Socket(address, port);
  
@@ -26,8 +25,9 @@ public class Client
             OutputStream os = socket.getOutputStream();
             OutputStreamWriter osw = new OutputStreamWriter(os);
             BufferedWriter bw = new BufferedWriter(osw);
- 
-            String number = "5";
+            
+            String number = "75";
+            System.out.println("Message sent to the server : "+number);
  
             String sendMessage = number + "\n";
             bw.write(sendMessage);
@@ -39,7 +39,7 @@ public class Client
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             String message = br.readLine();
-            System.out.println("Message received from the server : " +message);
+            System.out.println("Message received from the server : " + message);
         }
         catch (Exception exception)
         {
