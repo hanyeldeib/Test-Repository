@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.net.InetAddress;
 import java.net.Socket;
  
-public class Client
+public class CLient1
 {
  
     private static Socket socket;
@@ -26,7 +26,7 @@ public class Client
             OutputStreamWriter osw = new OutputStreamWriter(os);
             BufferedWriter bw = new BufferedWriter(osw);
             
-            String number = "30";
+            String number = "75";
             System.out.println("Message sent to the server : "+number);
  
             String sendMessage = number + "\n";

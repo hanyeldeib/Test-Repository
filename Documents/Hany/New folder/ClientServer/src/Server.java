@@ -17,9 +17,9 @@ public class Server
     try
     {
 
-        int port = 40000;
+        int port = 50000;
         ServerSocket serverSocket = new ServerSocket(port);
-        System.out.println("Server Started and listening to the port 40000");
+        System.out.println("Server Started and listening to the port 50000");
 
         //Server is running always. This is done using this while(true) loop
         while(true)
