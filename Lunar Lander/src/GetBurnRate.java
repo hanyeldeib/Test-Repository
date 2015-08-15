@@ -7,7 +7,9 @@ public class GetBurnRate {
 	
 	try{
 		BufferedReader inputReader =
-				new BufferedReader(new BufferedReader(new InputStreamReader(System.in)));
+				new BufferedReader(new 
+						BufferedReader(new 
+						InputStreamReader(System.in)));
 		
 		int burnRate = 0;
 		do {
@@ -18,17 +20,19 @@ public class GetBurnRate {
 						inputReader.readLine();
 				burnRate = 	Integer.parseInt(burnRateString);
 				
-				System.out.println("%" + burnRate);
-			}
-				Catch(NumberFormatException nfe)
+				System.out.println("%"+burnRate);
+			  }
+				catch(NumberFormatException nfe)
 				{
 				System.out.println("#Invalid burn rate");
 				}
-				while(burnRate >=0);
+		  }
+		while(burnRate >=0);
 				inputReader.close();
-		}
-				catch(IOExeption ioe){
+	
+	            }
+				catch(IOException ioe){
 					ioe.printStackTrace();
-			}
+		        }
 		}
 	}
