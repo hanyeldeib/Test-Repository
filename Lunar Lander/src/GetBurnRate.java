@@ -13,7 +13,7 @@ public class GetBurnRate {
 		
 		int burnRate = 0;
 		do {
-			System.out.println("Enter burn rate 0r <0 to quit: ");
+			System.out.println("Enter burn rate or <0 to quit: ");
 			
 			try{
 				String burnRateString = 
