@@ -5,9 +5,10 @@ class student
 {
 	String name;
 	int roll_no;
-	int sub1,sub2;
+	int subject_no,subject_grade, no_of_subjects;
 	int total;
 	float per;
+	int counter = 1;
 	void getdata() throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,19 +16,23 @@ class student
 		name = br.readLine();
 		System.out.println ("Enter Roll No. of Student");
 		roll_no = Integer.parseInt(br.readLine());
-		System.out.println ("Enter marks out of 100 of 1st subject");
-		sub1 = Integer.parseInt(br.readLine());
-		System.out.println ("Enter marks out of 100 of 2nd subject");
-		sub2 = Integer.parseInt(br.readLine());
+		System.out.println ("Enter number of subjects student is taking: ");
+		subject_no = Integer.parseInt(br.readLine());
+		no_of_subjects = subject_no;
+		System.out.println("Number of subjects " + subject_no);
+		while (subject_no>0){
+		System.out.println ("Enter marks out of 100 subject "+counter);
+		subject_grade = Integer.parseInt(br.readLine());
+		total = total + subject_grade;
+		subject_no = subject_no -1;
+		counter = counter+1;
+		}
 	}
 	void show()
 	{
-		total=sub1+sub2;
-		per=(total*100)/200;
+		per=(total*100)/(100*no_of_subjects);
 		System.out.println ("Roll No. = "+roll_no);
 		System.out.println ("Name = "+name);
-		System.out.println ("Marks of 1st Subject = "+sub1);
-		System.out.println ("Marks of 2nd Subject = "+sub2);
 		System.out.println ("Total Marks = "+total);
 		System.out.println ("Percentage = "+per+"%");
 	}
@@ -38,7 +43,6 @@ class q2Student
 	public static void main(String args[]) throws IOException
 	{
 		Section sectionObject = new Section();
-		//sectionObject.classSize = 5;
 		int studentCounter = sectionObject.getNum();
 		
 		while (studentCounter>0) {
