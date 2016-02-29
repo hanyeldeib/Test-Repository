@@ -17,7 +17,7 @@ public class Client
         try
         {
             String host = "localhost";
-            int port = 50000;
+            int port = 35000;
             InetAddress address = InetAddress.getByName(host);
             socket = new Socket(address, port);
  
@@ -32,8 +32,7 @@ public class Client
             String sendMessage = number + "\n";
             bw.write(sendMessage);
             bw.flush();
-            System.out.println("Message sent to the server : "+sendMessage);
- 
+             
             //Get the return message from the server
             InputStream is = socket.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);

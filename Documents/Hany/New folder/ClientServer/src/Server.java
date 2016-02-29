@@ -17,13 +17,13 @@ public class Server
     try
     {
 
-        int port = 50000;
+        int port = 35000;
         ServerSocket serverSocket = new ServerSocket(port);
-        System.out.println("Server Started and listening to the port 50000");
+        System.out.println("Server Started and listening to the port 35000");
 
         //Server is running always. This is done using this while(true) loop
         while(true)
-        {
+                {
             //Reading the message from the client
             socket = serverSocket.accept();
             InputStream is = socket.getInputStream();
@@ -54,7 +54,7 @@ public class Server
             bw.write(returnMessage);
             System.out.println("New Message sent to the client is "+returnMessage);
             bw.flush();
-        }
+            }
     }
     catch (Exception e)
     {
@@ -69,4 +69,4 @@ public class Server
         catch(Exception e){}
     }
   }
-}
+    }
