@@ -2,3 +2,4 @@ my text file
 my fist change
 Another change
 I added Line 4
+I added Line 5
