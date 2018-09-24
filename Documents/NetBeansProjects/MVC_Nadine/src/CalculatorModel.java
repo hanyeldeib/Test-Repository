@@ -1,4 +1,5 @@
 // CalculatorModel.java
+// This is a comment added on September 24, 2018
 
 
 	// The Model performs all the calculations needed
