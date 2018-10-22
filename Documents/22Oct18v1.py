@@ -1,8 +1,8 @@
 def f(x):
-    return 5*x**6+6*x**5-5*x**4-4*x**3+3*x**2
+    return 20*x**6+6*x**5-5*x**4-4*x**3+3*x**2
  
 def df(x):
-    return 30*x**5+30*x**4-20*x**3-12*x**2+6*x
+    return 120*x**5+30*x**4-20*x**3-12*x**2+6*x
 
 def dx(f, x):
     return abs(0-f(x))
