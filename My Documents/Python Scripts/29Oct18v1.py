@@ -20,6 +20,5 @@ def newtons_method(f, df, x0, e):
 
 x0s = [1,2,3,4,5]
 for x0 in x0s:
-    print('x0 is: ',x0)
     newtons_method(f, df, x0, 1e-5)
  
